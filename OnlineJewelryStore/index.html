@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jewelry Store</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="/scripts/bootstrap.js" type="text/javascript"></script>
+	<script src="/scripts/register.js" type="text/javascript"></script>
+	<script src="/scripts/addJewelry.js" type="text/javascript"></script>
+	<script src="/scripts/filterJewelry.js" type="text/javascript"></script>
+	<script src="/scripts/detailJewelry.js" type="text/javascript"></script>
+	<script src="/scripts/cart.js" type="text/javascript"></script>
+	<script src="/scripts/history.js" type="text/javascript"></script>
+	<script src="/scripts/script.js" type="text/javascript"></script>
+
+	<link href="/images/favicon.jpg" type="image/jpg" rel="shortcut icon"> 
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	<meta charset="utf-8">
+	<meta name="description" content="Jiafeng Liao's Homepage">
+	<meta name="keywords" content="online, Jewelry, store">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+<!-- ********* page header ******** -->
+	<header>
+		<h1>Jewelry Store</h1>
+		
+	</header>
+	<nav>
+		<ul class="menu">
+			<li id="homeBtn" class="btn btn-danger">home</li>
+			<li id="addJewelryBtn" class="admin btn btn-danger">Add Jewelrys</li>
+			
+		</ul>
+		<div class="login">
+			<span class="btn btn-danger material-icons" data-toggle="collapse" data-target="#filter-panel">search</span>
+			<span></span>
+			<div class="dropdown">
+				<span class="btn btn-danger" id="userInfoBtn">user info</span>
+				<span></span>
+				<div class="dropdown-content">
+					<a id="shoppingCartBtn">Shopping Cart</a>
+					<a id="purchaseHistoryBtn">Purchase History</a>
+					<a id="logoutBtn" href="logout.php">Logout</a>
+				</div>
+			</div>
+			<span class="btn btn-danger" id="loginBtn">login</span>
+			<span class="btn btn-danger" id="registerBtn">register</span>
+		</div>
+
+
+	</nav>
+
+<!-- *********** main page ********** -->
+	<section class="main">
+		<!-- *********** page login ********** -->
+		<div class="modal" id="loginModal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close">&times;</span>
+					<h2>Please Login</h2>
+				</div>
+				<div class="modal-body form-inline">
+					<p class="error alert-danger"></p>
+					<p><span>user name or email:</span><input class="form-control" type="text" name="username" value=""></p >
+					<p><span>password:</span><input class="form-control" type="password" name="password" value=""></p >
+					<br/>
+					<button class="btn btn-danger">Login</button>
+				</div>
+			</div>
+		</div>
+		<!-- *********** page register ********** -->
+		<div class="modal" id="registerModal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close">&times;</span>
+					<h2>Please Register</h2>
+				</div>
+				<div class="modal-body form-inline">
+					<p class="error alert-danger"></p>
+					<p class="email"><span>*Email:</span><input class="form-control" type="text" name="email"><span class="info"></span></p>
+					<p class="username"><span>*Username:</span><input class="form-control" type="text" name="username"><span class="info"></span></p>                   
+					<p class="password"><span>*Password:</span><input class="form-control" type="password" name="password"><span class="info"></span></p>
+					<p class="repassword"><span>*Re-enter Password:</span><input class="form-control" type="password" name="repassword"><span class="info"></span></p>
+					<br/>
+					<button class="btn btn-danger">Register</button>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<!-- *********** filter Jewelry module ********** -->
+		<div id="filter-panel" class="collapse filter-panel">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="form-inline">
+						<span>Search by Jewelry Name:</span>
+						<input id="search-name" type="text" class="form-control input-m" style="width: 300px">
+						<span style="width: 50px"></span>
+						<span>Search by Category:</span>
+						<select id="search-category" class="form-control">
+							<option value = ''> </option>
+							<option value = 'Ring'>Ring</option>
+							<option value = 'Diamond'>Diamond</option>
+							<option value = 'Engagement'>Engagement</option>
+							<option value = 'Chains'>Chains</option>
+							<option value = 'Gold'>Gold</option>
+                            <option value = 'Silver'>Silver</option>
+							<option value = 'Pearl'>Pearl</option>
+						</select>                                
+						<span style="width: 30px"></span>
+						<span id="searchBtn" class="btn btn-default material-icons">search</span>
+					</div>
+				</div>
+			</div>
+		</div> 
+
+
+	<!-- *********** Slider *************-->
+ 
+ 		<div id="slider">
+        <ul>	
+   			<li><img class="mySlides" src="images/1.jpg" style="width:100%"></li>
+   			<li><img class="mySlides" src="images/2.jpg" style="width:100%"></li>
+   			<li><img class="mySlides" src="images/3.jpg" style="width:100%"></li>
+   			<li><img class="mySlides" src="images/4.jpg" style="width:100%"></li>
+   			<li><img class="mySlides" src="images/5.jpg" style="width:100%"></li>
+   			<li><img class="mySlides" src="images/6.jpg" style="width:100%"></li>
+   			<li><img class="mySlides" src="images/7.jpg" style="width:100%"></li>
+   			<li><img class="mySlides" src="images/8.jpg" style="width:100%"></li>
+        </ul>	    
+		</div>
+        
+ 		<script>
+            var oDiv = document.getElementById('slider');		
+            var oUl = oDiv.getElementsByTagName('ul')[0];		
+            var aLi = oUl.getElementsByTagName('li');		
+            var iSpeed = 1;//正左负右		
+            var timer = null;		//计算ul的宽为所有li的宽的和;		
+            oUl.innerHTML += oUl.innerHTML+oUl.innerHTML;		
+            oUl.style.width = aLi[0].offsetWidth*aLi.length+'px';		
+            
+            function Slider()
+            {			
+                if (oUl.offsetLeft<-oUl.offsetWidth/2) 
+                {				
+                    oUl.style.left = 0;			
+                }
+                else if(oUl.offsetLeft>0)
+                {
+                    oUl.style.left =-oUl.offsetWidth/2+'px';			
+                }			
+                
+                oUl.style.left = oUl.offsetLeft-iSpeed+'px';//正负为方向		
+            }
+
+            timer =setInterval(Slider,30);		
+
+            oDiv.onmouseover = function()
+            {	
+                clearInterval(timer);
+            }		
+            
+            oDiv.onmouseout = function()
+            {			
+                timer =setInterval(Slider,30);	
+            }
+ 		</script>
+ 
+
+
+
+
+		<!-- *********** home page for listing Jewelrys ********** -->
+		<div class="home">
+			<p class="error alert-danger">Error: </p><hr/>
+			<div id="listing">
+				
+			</div>
+			<hr/>
+			<div id="paging">
+				
+			
+			</div>
+
+
+		</div>
+	<!-- *********** details and admin update ********** -->
+		<div class="modal" id="detail">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close">&times;</span>
+					<h2>Please Login</h2>
+				</div>
+				<div class="modal-body">
+					<div id="JewelryDetail">
+						<img src="inventory/images/1.jpg" alt="image">
+						<div class="info">
+							<span>Year: </span><p class="year"></p><br/>
+							<!-- <span>Rating: </span><p class="rating"></p><br/> -->
+							<span>Category: </span><p class="category"></p><br/>
+							<span>Synopsis: </span><br/><div class="synopsis"><p class="synopsis"></p></div>
+						</div>  
+						<span class="price">Price: </span><p class="price">$12.2</p>
+						<button class="btn btn-danger" name="addCart">Add to Cart</button>
+						
+
+					</div>
+					<div class="admin" id="updateJewelry">
+						<div class="input form-inline">
+						<form class="updateJewelry" action="" method="post" enctype="multipart/form-data">
+							<input type="text" name="Jewelry_id" value="" style="display: none;">
+							<p><span>Jewelry Name : </span><input class="form-control" type="text" name="Jewelry_name" value="" required></p>
+							<p><span>Release Year :  </span><input class="form-control" type="text" name="year" value="" required></p>
+							<p><span>Price : </span><input class="form-control" type="text" name="price" value="" required></p>
+							<p><span>Rating :  </span>
+								<select name="rating" class="form-control" style="width: 150px" required> 
+									<option value="" selected>                </option>
+									<option value="G"> I </option>
+									<option value="PG"> II </option>
+									<option value="PG-13"> III </option>     
+									<option value="R"> IV </option>
+								</select>
+							</p>
+							<p><span>Category : </span><span></span><br/><span></span>
+								<select multiple name="category[]" class="form-control" style="width: 150px;height: 100px" required>
+									<option value = 'Ring'>Ring</option>
+									<option value = 'Diamond'>Diamond</option>
+									<option value = 'Engagement'>Engagement</option>
+									<option value = 'Chains'>Chains</option>
+									<option value = 'Gold'>Gold</option>
+									<option value = 'Silver'>Silver</option>
+									<option value = 'Pearl'>Pearl</option>
+								</select>
+							</p>
+							<p><span>Upload Image :</span><span></span><input class="form-control" type="file" name="image" /></p>
+							<p><span>Upload Synopsis :</span><span></span><input class="form-control" type="file" name="synopsis" required /></p>
+							<button type="submit" class="submit btn btn-info" style="width: 150px">Update</button>
+						
+							<button id="deleteBtn" class="btn btn-warning" style="width: 150px">Delete</button>
+						</form>
+						</div>
+
+						
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+
+		<!-- *********** shopping cart ********** -->
+		<div class="shoppingCart panel panel-danger">
+			<div class="panel-heading">
+				<h2>Shopping Cart:</h2>
+			</div>
+			<div class="panel-body">
+				<p class="error alert-danger"> </p>
+				<div id="cartBlock" class="panel panel-danger">
+					<div class="panel-body" id="cartListing">
+	<!-- 					<div class="item">
+							<div class="image"><img src="inventory/images/1.jpg" alt="image"></div>
+							<div class="info">
+								<span class="title">A dog's purpose<hr></span>
+								<span class="detail">Year: 2016 Rating: PG</span>
+							</div>
+							<div class="price">
+								<span class="price"> $99.99</span>
+							</div>
+							<div class="function">
+								<span class="delete btn btn-danger"><i class="material-icons" style="font-size: 30px">delete_forever</i></span>
+								<span class="select">Select: <input type="checkbox" name="select" value="" style="zoom:1.5;"></span>
+
+							</div>
+						</div> -->
+						
+					</div>
+
+				</div>	
+				<div id="checkout" class="panel-foot">			
+					<span class="price">Total Price: $0.00</span>
+					<button class="btn btn-danger">Check Out</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- *********** purchase history ********** -->
+		<div class="history panel panel-danger">
+			<div class="panel-heading">
+				<h2>History:</h2>
+			</div>
+
+			<div class="panel-body">
+				<p class="error alert-danger"> </p>
+
+				<div class="panel-body" id="historyListing">
+					<div class="item">
+						<div class="image"><img src="inventory/images/1.jpg" alt="image"></div>
+						<div class="info">
+							<span class="title">A dog's purpose<hr></span>
+							<span class="detail">Year: 2016 Rating: PG</span>
+						</div>
+						<div class="price">
+							<span class="price"> $99.99</span>
+						</div>
+						<div class="function">
+							<span class="delete btn btn-danger"><i class="material-icons" style="font-size: 30px">delete_forever</i></span>
+							<span class="select">Select: <input type="checkbox" name="select" value="" style="zoom:1.5;"></span>
+
+						</div>
+					</div>
+					<div class="item">
+						<div class="image"><img src="inventory/images/1.jpg" alt="image"></div>
+						<div class="info">
+							<span class="title">A dog's purpose<hr></span>
+							<span class="detail">Year: 2016 Rating: PG</span>
+						</div>
+						<div class="price">
+							<span class="price"> $99.99</span>
+						</div>
+						<div class="function">
+							<span class="delete btn btn-danger"><i class="material-icons" style="font-size: 30px">delete_forever</i></span>
+							<span class="select">Select: <input type="checkbox" name="select" value="" style="zoom:1.5;"></span>
+
+						</div>
+					</div>
+					<div class="item">
+						<div class="image"><img src="inventory/images/1.jpg" alt="image"></div>
+						<div class="info">
+							<span class="title">A dog's purpose<hr></span>
+							<span class="detail">Year: 2016 Rating: PG</span>
+						</div>
+						<div class="price">
+							<span class="price"> $99.99</span>
+						</div>
+						<div class="function">
+							<span class="delete btn btn-danger"><i class="material-icons" style="font-size: 30px">delete_forever</i></span>
+							<span class="select">Select: <input type="checkbox" name="select" value="" style="zoom:1.5;"></span>
+
+						</div>
+					</div>					
+				</div>
+
+			</div>
+		</div>
+
+
+
+		<!-- **********  add Jewelry module  ********** -->
+		<div class="admin addJewelry panel panel-danger">
+			<div class="panel-heading">
+				<h1>  Adding a Jewelry:  </h1>               
+			</div>
+			<div class="panel-body">
+				<p class="error alert-danger"></p>
+				<div class="input form-inline">
+				<form class="addJewelry" action="" method="post" enctype="multipart/form-data">
+					<p><span>Jewelry Name : </span><input class="form-control" type="text" name="Jewelry_name" value="" required></p>
+					<p><span>Release Year :  </span><input class="form-control" type="text" name="year" value="" required></p>
+					<p><span>Price : </span><input class="form-control" type="text" name="price" value="" required></p>
+					<p><span>Rating :  </span>
+						<select name="rating" class="form-control" style="width: 150px" required> 
+							<option value="" selected>                </option>
+								<option value="G"> I </option>
+								<option value="PG"> II </option>
+								<option value="PG-13"> III </option>     
+								<option value="R"> IV </option>
+						</select>
+					</p>
+					<p><span>Category : </span><span></span><br/><span></span>
+						<select multiple name="category[]" class="form-control" style="width: 150px;height: 100px" required>
+							<option value = 'Ring'>Ring</option>
+							<option value = 'Diamond'>Diamond</option>
+							<option value = 'Engagement'>Engagement</option>
+							<option value = 'Chains'>Chains</option>
+							<option value = 'Gold'>Gold</option>
+							<option value = 'Silver'>Silver</option>
+							<option value = 'Pearl'>Pearl</option>
+						</select>
+					</p>
+					<p><span>Upload Image :</span><span></span><input class="form-control" type="file" name="image" required /></p>
+					<p><span>Upload Synopsis :</span><span></span><input class="form-control" type="file" name="synopsis" required /></p>
+					<button type="submit" class="submit btn btn-info">Upload</button>
+
+				</form>
+				</div>
+
+			</div>
+
+		</div>
+
+		
+	</section>
+
+	<footer>
+        <br>
+		<h4> Help  Feedback  Privacy  Terms</h4>
+	</footer>
+
+</body>
+</html>
