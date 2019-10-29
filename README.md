@@ -10,6 +10,7 @@
    - ***Main menu***
       
       已完成功能：home page, products page, Contact page, About us可以drop down
+      
       未完成功能：About us的四个单独子页面
    - ***slider***
    - ***Product items***
