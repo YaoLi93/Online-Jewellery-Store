@@ -34,3 +34,7 @@
    - 页面：Cart单独页面, login(account)页面, About Us四个子页面，product single page, Checkout, Chat page
    
    - 功能：view cart, checkout ,login(account)相关功能，change language, add wishlist, add cart， sort by, update
+
+   ## 更新日志 2019/10/28 by ZZH
+   ###1 Login page
+   做了login 的php界面。删去了冗余文件。并且连接了index.html 和 login.php
