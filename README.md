@@ -29,3 +29,8 @@
    - 已完成功能：页面布局
    - 未完成功能：邮件发送功能
    
+### NEED TO DO（粗略）
+   
+   - 页面：Cart单独页面, login(account)页面, About Us四个子页面，product single page, Checkout, Chat page
+   
+   - 功能：view cart, checkout ,login(account)相关功能，change language, add wishlist, add cart， sort by, update
