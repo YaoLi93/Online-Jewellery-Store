@@ -6,7 +6,7 @@
    - ***header***
       
       已完成功能：可以drop down显示Cart, drop down显示Search       
-      未完成功能:Cart单独页面，Log in（account）页面，Search功能
+      未完成功能: Cart单独页面，Log in（account）页面，Search功能
    - ***Main menu***
       
       已完成功能：home page, products page, Contact page, About us可以drop down
