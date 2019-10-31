@@ -23,10 +23,10 @@
    - ***Footer***
    
 ### 3.Products
-```diff
+    ```diff
     + 已完成功能：页面布局
     - 未完成功能：sort by, 翻页
-```
+    ```
     
 ### 4.Contact us
    ```diff
