@@ -1,6 +1,6 @@
 # Royal-Jewellery-Store
 ```diff
-+ ## 更新日志 2019/10/28 by Yao
+## +更新日志 2019/10/28 by Yao
 ```
 ### 1.借鉴SWAROVSKI重新写了一个 设计了icon和名字 整个网站的基调为金、白、黑
 ### 2.home page
