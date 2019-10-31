@@ -48,7 +48,6 @@
 ## 更新日志 2019/10/31 by Yao
    
    ### 添加商品单独页面product-single page
-      
      ```diff
      + 已完成功能：single product page 实现zoom， slide等功能
      + 上传product-single.html及多个相关css和js文件 建议使用前重新下载整体更新项目文件
