@@ -35,6 +35,12 @@
    
    - 功能：view cart, checkout ,login(account)相关功能，change language, add wishlist, add cart， sort by, update
 
-   ## 更新日志 2019/10/28 by ZZH
+## 更新日志 2019/10/28 by ZZH
    ### 1 Login page
    做了login 的php界面。删去了冗余文件。并且连接了index.html 和 login.php
+   
+   
+## 更新日志 2019/10/31 by Yao
+   
+   ### 添加商品单独页面product-single page
+   
