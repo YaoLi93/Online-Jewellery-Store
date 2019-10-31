@@ -1,14 +1,14 @@
 # Royal-Jewellery-Store
-```diff
+
 ## +更新日志 2019/10/28 by Yao
-```
 ### 1.借鉴SWAROVSKI重新写了一个 设计了icon和名字 整个网站的基调为金、白、黑
 ### 2.home page
    - ***pre-header***
    - ***header***
-      
-      已完成功能：可以drop down显示Cart, drop down显示Search       
-      未完成功能: Cart单独页面，Log in（account）页面，Search功能
+      ```diff
+      + 已完成功能：可以drop down显示Cart, drop down显示Search       
+      - 未完成功能: Cart单独页面，Log in（account）页面，Search功能
+      ```
    - ***Main menu***
       
       已完成功能：home page, products page, Contact page, About us可以drop down
