@@ -21,34 +21,27 @@
       - 未完成功能：add wishlist，add cart, 商品单独显示页面
       ```
    - ***Footer***
-   
 ### 3.Products
 
    ```diff
    + 已完成功能：页面布局
    - 未完成功能：sort by, 翻页
-   ```
-    
+   ```    
 ### 4.Contact us
    ```diff
    + 已完成功能：页面布局
    - 未完成功能：邮件发送功能
    ```
-### NEED TO DO（粗略）
-   
+### NEED TO DO（粗略） 
    - 页面：Cart单独页面, login(account)页面, About Us四个子页面，product single page, Checkout, Chat page
-   
    - 功能：view cart, checkout ,login(account)相关功能，change language, add wishlist, add cart， sort by, update
-   <br><br>
+   <br><br><br><br>
    
-
 ## 更新日志 2019/10/28 by ZZH
    ### 1 Login page
    做了login 的php界面。删去了冗余文件。并且连接了index.html 和 login.php
    
-   
-   
-   
+   <br><br><br><br>
    
 ## 更新日志 2019/10/31 by Yao
    
