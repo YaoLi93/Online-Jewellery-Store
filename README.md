@@ -39,9 +39,7 @@
    - 页面：Cart单独页面, login(account)页面, About Us四个子页面，product single page, Checkout, Chat page
    
    - 功能：view cart, checkout ,login(account)相关功能，change language, add wishlist, add cart， sort by, update
-   
-   
-   
+   <br><br>
    
 
 ## 更新日志 2019/10/28 by ZZH
