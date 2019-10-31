@@ -1,6 +1,6 @@
 # Royal-Jewellery-Store
 
-## +更新日志 2019/10/28 by Yao
+## 更新日志 2019/10/28 by Yao
 ### 1.借鉴SWAROVSKI重新写了一个 设计了icon和名字 整个网站的基调为金、白、黑
 ### 2.home page
    - ***pre-header***
@@ -39,10 +39,17 @@
    - 页面：Cart单独页面, login(account)页面, About Us四个子页面，product single page, Checkout, Chat page
    
    - 功能：view cart, checkout ,login(account)相关功能，change language, add wishlist, add cart， sort by, update
+   
+   
+   
+   
 
 ## 更新日志 2019/10/28 by ZZH
    ### 1 Login page
    做了login 的php界面。删去了冗余文件。并且连接了index.html 和 login.php
+   
+   
+   
    
    
 ## 更新日志 2019/10/31 by Yao
