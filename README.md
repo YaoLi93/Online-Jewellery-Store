@@ -26,12 +26,13 @@
    ```diff
     + - 已完成功能：页面布局
     - - 未完成功能：sort by, 翻页
-    ```
+   ```
+    
 ### 4.Contact us
-   ```diff
+```diff
    + - 已完成功能：页面布局
    - - 未完成功能：邮件发送功能
-   ```
+```
 ### NEED TO DO（粗略）
    
    - 页面：Cart单独页面, login(account)页面, About Us四个子页面，product single page, Checkout, Chat page
@@ -46,4 +47,9 @@
 ## 更新日志 2019/10/31 by Yao
    
    ### 添加商品单独页面product-single page
+      
+      = 上传product-single.html及多个相关css和js文件 建议使用前重新下载整体更新项目文件
+      ```diff
+      + - 已完成功能：single product page 实现zoom， slide等功能
+      - - 未完成功能：图片及产品信息为死数据， related product的zoom有bug
    
