@@ -29,10 +29,10 @@
    ```
     
 ### 4.Contact us
-```diff
+   ```diff
    + 已完成功能：页面布局
    - 未完成功能：邮件发送功能
-```
+   ```
 ### NEED TO DO（粗略）
    
    - 页面：Cart单独页面, login(account)页面, About Us四个子页面，product single page, Checkout, Chat page
@@ -52,4 +52,5 @@
       ```diff
       + 已完成功能：single product page 实现zoom， slide等功能
       - 未完成功能：图片及产品信息为死数据， related product的zoom有bug
+      ```
    
