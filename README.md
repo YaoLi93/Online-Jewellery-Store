@@ -51,5 +51,11 @@
    +已完成功能：single product page 实现zoom， slide等功能
    -未完成功能：图片及产品信息为死数据， related product的zoom有bug
    ```
+   <br><br><br>
    
+## 更新日志 2019/11/1 by Yao
    
+   ### 1 添加页面FAQ page, About us page， Developer等
+   ```diff
+   +上传多个.html文件 建议使用前重新下载整体更新项目文件
+   ```
