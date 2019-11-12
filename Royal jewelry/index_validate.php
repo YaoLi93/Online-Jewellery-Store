@@ -1,11 +1,10 @@
 
+
+
 <?php
-//echo "login page";
-session_start();
-$user_name=md5($_POST["username"]);
-$password=md5($_POST["password"]);
-$url="index.html";
-//echo "".$user_name.",".$password.".";
+if(!empty($_COOKIE["username"]) && !empty($_COOKIE["pwd"]) ){
+$user_name=$_COOKIE["username"];
+$password=$_COOKIE["pwd"];
 $message1 = "sign in successfully !";
 $message2 = "no data";
 $message3 = "can't link to mysql";
@@ -17,19 +16,8 @@ if($link){
 	$result=mysqli_query($link,$sql);
 	if(mysqli_num_rows($result)!=0){
 			echo "<script type='text/javascript'>alert('$message1');</script>";
-			$_SESSION["usr"]=$username;
-			$c_usrname_value = $user_name;
-			$c_pwd_value=$password;
-			setcookie("username", $c_usrname_value, time() + (86400 * 30), "/");
-			setcookie("pwd", $c_pwd_value, time() + (86400 * 30), "/");
-			while($row = mysqli_fetch_array($result))
-			{
-		    setcookie("name", $row["NAME"], time() + (86400 * 30), "/");
-		    echo $row["NAME"];
-			}
-			//setcookie("name", $result["NAME"], time() + (86400 * 30), "/");
 			echo "<script type='text/javascript'>
-			window.location.href = 'index_validate.php';
+			window.location.href = 'index.php';
 			</script>";
 			// $loc = 'index.html';
 			// Header("Location: index.html");
@@ -41,5 +29,7 @@ if($link){
 }else{
 	echo "<script type='text/javascript'>alert('$message3');</script>";
 }
+}
+
 
 ?>

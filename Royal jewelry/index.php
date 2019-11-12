@@ -136,11 +136,9 @@
                 </select>
 	          </li><!-- / Languages -->
 
-
 	          <!-- Log in -->
 	          <li class="login.">
-	        <a href="">|</a>
-                    <a href="Login.php">Log in</a>
+                    <a href="Login.html" id="loginTag">login</a>
 
                 
 	          </li><!-- / Log in -->
@@ -624,8 +622,27 @@
 
     <!-- Main Js File -->
     <script src="js/script.js"></script>
-    
+ 
+    <script type="text/javascript">
+
+	// boolean outputs "" if false, "1" if true
+
+	//  numeric value, both with and without quotes
+	var name= "<?php 
+		if(!empty($_COOKIE["name"])){
+		echo $_COOKIE["name"];
+		}else{
+			echo "login";
+		} ?>";
+	var element = document.getElementById("loginTag");
+	element.innerHTML=name;
+	</script>
 
 
   </body>
   </html>
+
+
+
+
+
