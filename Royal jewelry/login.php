@@ -1,13 +1,15 @@
 
 <?php
 //echo "login page";
+
+
 session_start();
 $user_name=md5($_POST["username"]);
 $password=md5($_POST["password"]);
 $url="index.html";
 //echo "".$user_name.",".$password.".";
 $message1 = "sign in successfully !";
-$message2 = "no data";
+$message2 = "no such user";
 $message3 = "can't link to mysql";
 
 $link=mysqli_connect("localhost","root","root","jewelrystore");
@@ -25,7 +27,7 @@ if($link){
 			while($row = mysqli_fetch_array($result))
 			{
 		    setcookie("name", $row["NAME"], time() + (86400 * 30), "/");
-			echo $row["NAME"];
+			//echo $row["NAME"];
 			break;
 			}
 			//setcookie("name", $result["NAME"], time() + (86400 * 30), "/");
@@ -33,7 +35,6 @@ if($link){
 			$fileNames = array(
 				'name' => $_COOKIE["name"]
 			); // 是数组，不是字符串
-			sendback_index($fileNames);
 			echo "<script type='text/javascript'>
 			window.location.href = 'index.html';
 			</script>";
@@ -43,18 +44,16 @@ if($link){
 
 	}else{
 		echo "<script type='text/javascript'>alert('$message2');</script>";
+		echo "<script type='text/javascript'>
+			window.location.href = 'login.html';
+			</script>";
 	}
 }else{
 	echo "<script type='text/javascript'>alert('$message3');</script>";
+	echo "<script type='text/javascript'>
+			window.location.href = 'login.html';
+			</script>";
 }
 
-function sendback_index($array)
-{
-	$filesJSON = json_encode($array);// 转成json格式
-	echo "<script type='text/javascript' src='js/index.js'>
-		alert('?');
-		getProfile($filesJSON);
-	</script>";
-}
 
 ?>

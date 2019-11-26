@@ -21,15 +21,17 @@
     var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-    myFunction(this);
+      //console.log(this);
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
     }
   };
-  xhttp.open("GET", "test.php", true);
+  xhttp.open("GET", "index_validate.php", true);
   xhttp.send();
   }
 
-  function myFunction(json) {
-    alert(json.Name);
+  function myFunction(packJson) {
+    document.getElementById("login").innerHTML = packJson.name;
   }
 //});
 
