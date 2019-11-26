@@ -25,11 +25,17 @@ if($link){
 			while($row = mysqli_fetch_array($result))
 			{
 		    setcookie("name", $row["NAME"], time() + (86400 * 30), "/");
-		    echo $row["NAME"];
+			echo $row["NAME"];
+			break;
 			}
 			//setcookie("name", $result["NAME"], time() + (86400 * 30), "/");
+			
+			$fileNames = array(
+				'name' => $_COOKIE["name"]
+			); // 是数组，不是字符串
+			sendback_index($fileNames);
 			echo "<script type='text/javascript'>
-			window.location.href = 'index_validate.php';
+			window.location.href = 'index.html';
 			</script>";
 			// $loc = 'index.html';
 			// Header("Location: index.html");
@@ -40,6 +46,15 @@ if($link){
 	}
 }else{
 	echo "<script type='text/javascript'>alert('$message3');</script>";
+}
+
+function sendback_index($array)
+{
+	$filesJSON = json_encode($array);// 转成json格式
+	echo "<script type='text/javascript' src='js/index.js'>
+		alert('?');
+		getProfile($filesJSON);
+	</script>";
 }
 
 ?>
