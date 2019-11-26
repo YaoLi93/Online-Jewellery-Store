@@ -29,7 +29,7 @@
   }
 
   function myFunction(json) {
-    alert(json);
+    alert(json.Name);
   }
 //});
 
