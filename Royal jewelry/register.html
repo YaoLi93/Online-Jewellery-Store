@@ -21,19 +21,19 @@
   <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="plugins/slick-carousel/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="plugins/slick-carousel/slick/slick-theme.css"/>
-  
+
 
   <!-- boostrap -->
    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style1.css">
-   <link rel="stylesheet" href="css/login.css">
+ <!-- Main Stylesheet -->
+ <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/login.css">
 </head>
 <body id="body">
 
@@ -44,56 +44,72 @@
 
 
 
-<!-- welcome h1 -->
-	<h1 class="welcome">WELCOME</h1>
-
 <!-- login -->
-<form action="" id="form" method="POST">
+<form action="register.php" method="POST">
 <div class="container">
        	 <div class="row">
           	<div class="col" style="margin-left: 0%">
-          		<h3 class="welcome">Login</h3>
-
-				  	<div class="form-group">
-				    <label for="exampleInputEmail1">Email address</label>
-				    <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-				    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-				  </div>
-				  <div class="form-group">
-				    <label for="exampleInputPassword1">Password</label>
-				    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-				</div></div>
-
-			
-				
-          <div class="col">
-           	<h3 class="welcome">Register</h1>
-           		<p>
-           			<br>
-          		Need a new account for your online jwelery shopping?<br>
-          	  	✔️ Get access to limited edition products<br>
-				✔️ Level up for a Runtastic Premium subscription<br>
-				✔️ Faster checkout with your saved address and payment details<br>
-				✔️ Access your complete order history<br>
-          		</p>
-          </div>
-         
-        </div>
-
-        <br><br><br>
-         <div class="row">
-         	 <div class="col"> 
-         	 	  <button type="submit" class="btn btn-dark btn-lg btn-block" onclick="loginAction()">Login</button>
+          		<h3 class="welcome">Login Detail</h3>
             </div>
-         	  <div class="col"> 
-         	  	  <button type="submit" class="btn btn-dark btn-lg btn-block" onclick="registerAction()">Register</button>
-         	  	</div>
+        </div>  
+
+        <br>
+         <div class="row">
+                <div class="col" >
+                <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                </div>
         </div>
+        <div class="row">
+                <div class="col" >
+                <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+
+                </div> 
+                </div>
+        </div>
+        
+      <br><br><br>
+      <div class="row">
+            <div class="col" >
+            <h3 class="welcome">Your name</h3>
+            </div>
+    </div>
+   <br>
+   <div class="row">
+        <div class="col" >
+        <div class="form-group">
+                <label for="exampleInputEmail1">First Name</label>
+                <input type="text" name="firstname" class="form-control" id="exampleFirstName" aria-describedby="emailHelp" placeholder="Frist name">
+              
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" >
+        <div class="form-group">
+                <label for="exampleInputPassword1">Last Name</label>
+                <input type="text" name="lastname" class="form-control" id="exampleInputLastName" placeholder="Last name">
+        </div>
+        </div>
+     </div> 
+<br><br><br>
+    <div class="row">
+            <div class="col" >
+            <button type="submit" class="btn btn-dark btn btn-block" onclick="registerAction()">Register</button>
+        </div>
+        </div>
+</div>
 	</form>
 	<br><br><br>
 
 
 <div class="footerpage"></div>
+
 
 
 
@@ -125,24 +141,14 @@
    		 $(".headerpage").load("head.html");
         $(".footerpage").load("footer.html");
 	});
-    	 function loginAction(){
-  
-        $("#form").removeAttr('action');
-        $("#form").attr('action','login.php');
-        $("#form").submit();
-    };
+    	 
 
     function registerAction(){
-      
-        $("#form").removeAttr('action');
-        $("#form").attr('action','register.html');
-        $("#form").submit();
+        document.from.action="register.php";//提交的url
+        document.from.submit();
     };
     </script>
- <script src="js/jquery-2.1.4.min.js"></script>
 
 
   </body>
   </html>
-
- 
