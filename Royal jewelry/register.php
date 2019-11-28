@@ -4,7 +4,9 @@ $usrname = md5($_POST["username"]);
 $passwd = md5($_POST["password"]);
 $firstname = $_POST["firstname"];
 $lastname = $_POST["lastname"];
-$name = $firstname . $lastname;
+$space=" ";
+$name = $firstname . $space;
+$name = $name . $lastname;
 
 $message1 = "register successfully !";
 $message2 = "username exsit";
