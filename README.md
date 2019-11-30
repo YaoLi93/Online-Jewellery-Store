@@ -68,3 +68,8 @@
 数据库已经搭建好了，大家直接导入那个mysql同步文件夹的文件就ok了。
 然后登陆注册功能彻底弄好了，优化了js和php之间的数据交流方式，用json。
 然后创建了head.html footer.html 模块复用，不需要每次都写一大堆。
+
+
+## 更新日志 2019/11/30 by Yao
+上传product.sql、product_image.sql、product_cate.sql<br>
+product_image的url地址是相对地址 使用时按需修改
