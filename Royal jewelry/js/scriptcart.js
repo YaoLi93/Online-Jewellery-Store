@@ -1,33 +1,50 @@
-var goodsList = [{
-		id: 1234564876,
-		imgUrl: 'images/shop/products/product-1.jpg',
-		goodsInfo: 'LIMITED EDITION:ANNUAL EDITION ORNAMENT 2019',
-		goodsParams: '5427990',
-		price: 199,
-		goodsCount: 1,
-		singleGoodsMoney: 199
-	},
-	{
-		id: 1234564876,
-		imgUrl: 'images/shop/products/product-2.jpg',
-		goodsInfo: 'CCCCCC',
-		goodsParams: 'DDDDDD',
-		price: 299,
-		goodsCount: 1,
-		singleGoodsMoney: 299
-	},
-	{
-		id: 1234564876,
-		imgUrl: 'images/shop/products/product-3.jpg',
-		goodsInfo: 'EEEEEEE',
-		goodsParams: 'FFFFFFFF',
-		price: 399,
-		goodsCount: 1,
-		singleGoodsMoney: 399
-	}
-]
+goodsList = new Array();
 var deleteGoods = null
-loadGoods()
+
+$(document).ready(function(){
+
+getProfile();
+
+});
+
+
+
+function getProfile(){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //console.log(this);
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+        console.log(this.responseText);
+        loadGoods()
+    }
+  };
+
+  xhttp.open("GET", "cart.php", true);
+  xhttp.send();
+
+  }
+
+function myFunction(packJson) {
+	
+    //document.write(packJson[0].id);
+    //document.write(packJson.length);
+    for (var i=0;i<packJson.length;i++){
+    	//document.write(packJson[i].id);
+    	goodsList[i] = new Array;
+    	goodsList[i].id = packJson[i].id;
+    	goodsList[i].imgUrl = packJson[i].imgUrl;
+    	goodsList[i].goodsInfo = packJson[i].goodsInfo;
+    	goodsList[i].goodsParams = packJson[i].PID;
+    	goodsList[i].price = packJson[i].goodsCount*packJson[i].singleGoodsMoney;
+    	goodsList[i].goodsCount = packJson[i].goodsCount;
+    	goodsList[i].singleGoodsMoney = packJson[i].singleGoodsMoney;
+    }
+    
+}
+
+
 
 function loadGoods() {
 	$.each(goodsList, function(i, item) {

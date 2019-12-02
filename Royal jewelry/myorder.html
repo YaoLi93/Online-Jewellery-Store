@@ -42,57 +42,6 @@
 <div class="headerpage"></div>
 
 
-
-
-<!-- welcome h1 -->
-	<h1 class="welcome">WELCOME</h1>
-
-<!-- login -->
-<form action="" id="form" method="POST">
-<div class="container">
-       	 <div class="row">
-          	<div class="col" style="margin-left: 0%">
-          		<h3 class="welcome">Login</h3>
-
-				  	<div class="form-group">
-				    <label for="exampleInputEmail1">Email address</label>
-				    <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-				    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-				  </div>
-				  <div class="form-group">
-				    <label for="exampleInputPassword1">Password</label>
-				    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-				</div></div>
-
-			
-				
-          <div class="col">
-           	<h3 class="welcome">Register</h1>
-           		<p>
-           			<br>
-          		Need a new account for your online jwelery shopping?<br>
-          	  	✔️ Get access to limited edition products<br>
-				✔️ Level up for a Runtastic Premium subscription<br>
-				✔️ Faster checkout with your saved address and payment details<br>
-				✔️ Access your complete order history<br>
-          		</p>
-          </div>
-         
-        </div>
-
-        <br><br><br>
-         <div class="row">
-         	 <div class="col"> 
-         	 	  <button type="submit" class="btn btn-dark btn-lg btn-block" onclick="loginAction()">Login</button>
-            </div>
-         	  <div class="col"> 
-         	  	  <button type="submit" class="btn btn-dark btn-lg btn-block" onclick="registerAction()">Register</button>
-         	  	</div>
-        </div>
-	</form>
-	<br><br><br>
-
-
 <div class="footerpage"></div>
 
 
@@ -119,31 +68,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
     <script src="js/head.js"></script>
-    <script type="text/javascript">
-	$(document).ready(function(){
-   		 $(".headerpage").load("head.html");
-        $(".footerpage").load("footer.html");
-	});
-    	 function loginAction(){
   
-        $("#form").removeAttr('action');
-        $("#form").attr('action','login.php');
-        $("#form").submit();
-    };
-
-    function registerAction(){
-      
-        $("#form").removeAttr('action');
-        $("#form").attr('action','register.html');
-        $("#form").submit();
-    };
-    </script>
  <script src="js/jquery-2.1.4.min.js"></script>
 
 
   </body>
   </html>
-
- 

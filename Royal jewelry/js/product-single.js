@@ -86,7 +86,7 @@ var buy_num=element.value;
         myFunction3(myArr);
       }
     };
-  var json_upload = "json_name=" + JSON.stringify({pid:"John Rambo", uid:"2pm"});
+  //var json_upload = "json_name=" + JSON.stringify({pid:"John Rambo", uid:"2pm"});
   xmlhttp.open("POST", theUrl, true);
   xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xmlhttp.send("pid=" + pid + "&uid=" + uid + "&quantity=" + buy_num);

@@ -6,37 +6,63 @@
 
 //(function ($) { //'use strict';
 //  Homepage Slider
+
+
+ //var uid=-1;
   $(document).ready(function(){
     $('.home-slider').slick();
-   	$(".headerpage").load("head.html");
-     $(".footerpage").load("footer.html");
-     getProfile();
-     getProduct();
-
-    //  var name= "<?php if(!empty($_COOKIE["name"])){echo $_COOKIE["name"];}else{	echo "login";} ?>" ;
-    //  var element = document.getElementById("loginTag");
-    //  element.innerHTML=name;	
+   	// $(".headerpage").load("head.html");
+    //  $(".footerpage").load("footer.html");
+    
    
+  //    Elementcart=document.getElementById("gocart");
+  //    Elementorder=document.getElementById("myorder");
+  //    Elementcart.onclick="GoCart()";
+  //    Elementorder.onclick="GoHistory()";
+    //  getProfile();
+     getProduct();
+    
   });
+  
+  // function GoCart(){
+   
+  //   if(uid<0){
+  //     alert("you have to login");
+  //   }else{
+  //     window.open("cart.html");
+  //   }
+  // }
+  // function GoHistroy(){
+  //   if(uid<0){
+  //     alert("you have to login");
+  //   }else{
+  //     window.open("myorder.html");
+  //   }
+  // }
+  
+  // //-----------------------get Profile-----------------------
+  // function getProfile(){
+  //   var xhttp = new XMLHttpRequest();
+  // xhttp.onreadystatechange = function() {
+  //   if (this.readyState == 4 && this.status == 200) {
+  //     console.log(this.responseText);
+  //       var myArr = JSON.parse(this.responseText);
+  //       myFunction(myArr);
+  //   }
+  // };
+  // xhttp.open("GET", "index_validate.php", true);
+  // xhttp.send();
+  // }
 
+  // function myFunction(packJson) {
+  //   document.getElementById("gocart").addEventListener ("click", GoCart, false);
+  //   document.getElementById("myorder").addEventListener ("click", GoHistroy, false);
 
-  //-----------------------get Profile-----------------------
-  function getProfile(){
-    var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      //console.log(this);
-        var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
-    }
-  };
-  xhttp.open("GET", "index_validate.php", true);
-  xhttp.send();
-  }
-
-  function myFunction(packJson) {
-    document.getElementById("login").innerHTML = packJson.name;
-  }
+  //  if(packJson.success==1){ 
+  //   document.getElementById("login").innerHTML = packJson.name;
+  //   uid=packJson.UID;
+  //  }
+  // }
 
 
   //-----------------------Get product-----------------------
@@ -72,15 +98,7 @@
     row+="</a></h4><p class=\"price\">$";
     row+=packJson[i].PRICE;
     row+="</p></div></div></div>";
-
-   
     }
-
-    // for(var i = 0; i < packJson.length; i++){
- 
-    //     alert(packJson[i].name + " " + packJson[i].password);
-      
-    //  }
     document.getElementById("product_row").innerHTML = row;
   }
     var pid=1;
@@ -91,6 +109,7 @@
       console.log(des);
       window.open(des);
   }
+
 
 //   function page(){
 //     for(var i = 0; i < packJson.length; i++){
