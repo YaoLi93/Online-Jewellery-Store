@@ -63,7 +63,7 @@ if($link){
             echo "<script type='text/javascript'>alert('$message1');</script>";    
             //echo "新记录插入成功";
         } else {
-            $error_msg=mysqli_error($conn);
+            $error_msg=mysqli_error($link);
             echo "<script type='text/javascript'>alert('$error_msg');</script>"; 
         }
        

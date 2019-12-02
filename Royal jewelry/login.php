@@ -26,7 +26,9 @@ if($link){
 			setcookie("pwd", $c_pwd_value, time() + (86400 * 30), "/");
 			while($row = mysqli_fetch_array($result))
 			{
-		    setcookie("name", $row["NAME"], time() + (86400 * 30), "/");
+			setcookie("name", $row["NAME"], time() + (86400 * 30), "/");
+			setcookie("uid", $row["ID"], time() + (86400 * 30), "/");
+			
 			//echo $row["NAME"];
 			break;
 			}

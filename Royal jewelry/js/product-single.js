@@ -2,13 +2,35 @@
 
 
 
-
+  var pid;
+  var uid;
   $(document).ready(function(){
    	$(".headerpage").load("head.html");
      $(".footerpage").load("footer.html");
-    var pid=window.location.href.split("=")[1];
+    pid=window.location.href.split("=")[1];
     get_singleProduct(pid);
+    getProfile();
+
   });
+
+  function getProfile(){
+    var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //console.log(this);
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+    }
+  };
+  xhttp.open("GET", "index_validate.php", true);
+  xhttp.send();
+  }
+
+  function myFunction(packJson) {
+    document.getElementById("login").innerHTML = packJson.name;
+    uid=packJson.UID;
+  }
+
 
   function get_singleProduct(pid){
   
@@ -52,9 +74,39 @@
     $('#lurl3').attr('data-thumb',packJson[0].URL3);
 }
 
+function Ordernow() {
+var element=document.getElementById("quantity");
+var buy_num=element.value;
+  if(uid){
+    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+    var theUrl = "ordernow.php";
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction3(myArr);
+      }
+    };
+  var json_upload = "json_name=" + JSON.stringify({pid:"John Rambo", uid:"2pm"});
+  xmlhttp.open("POST", theUrl, true);
+  xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xmlhttp.send("pid=" + pid + "&uid=" + uid + "&quantity=" + buy_num);
 
+   
+   // xmlhttp.setRequestHeader("Content-Type", "application/json");
+   // xmlhttp.send(JSON.stringify({ "pid": pid, "uid": uid, "quantity": buy_num} ));
+  //  window.open(theUrl);
+  }else{
+    alert("you have to login!");
+  }
+}
 
-
+function myFunction3(packJson) {
+  if(packJson.success==1){
+    alert("success put into cart"+packJson.error);
+  }else{
+    alert("fail:"+packJson.error);
+  }
+}
 
 
 
