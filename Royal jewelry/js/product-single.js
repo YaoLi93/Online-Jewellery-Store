@@ -5,31 +5,12 @@
   var pid;
   var uid;
   $(document).ready(function(){
-   	$(".headerpage").load("head.html");
-     $(".footerpage").load("footer.html");
+  
     pid=window.location.href.split("=")[1];
     get_singleProduct(pid);
-    getProfile();
+   
 
   });
-
-  function getProfile(){
-    var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      //console.log(this);
-        var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
-    }
-  };
-  xhttp.open("GET", "index_validate.php", true);
-  xhttp.send();
-  }
-
-  function myFunction(packJson) {
-    document.getElementById("login").innerHTML = packJson.name;
-    uid=packJson.UID;
-  }
 
 
   function get_singleProduct(pid){
