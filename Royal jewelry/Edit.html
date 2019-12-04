@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="ROYAL JEWELRY">
+  
+  <meta name="author" content="Yao Li">
+
+  <title>ROYAL JEWELRY</title>
+
+  <!-- Mobile Specific Meta-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+  
+  <!-- Themefisher Icon font -->
+  <link rel="stylesheet" href="plugins/themefisher-font/style.css">
+
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="plugins/slick-carousel/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="plugins/slick-carousel/slick/slick-theme.css"/>
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style1.css">
+
+
+
+
+  <style type="text/css">
+  	
+		div.addJewelry {
+			display: block;
+
+		}
+		div.addJewelry .center{
+			margin:auto;
+			width:60%;
+		}
+
+		div.addJewelry span {
+			display: inline-block;
+			width: 150px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 16px;	
+		}
+		div.addJewelry div.input {
+			display: inline-block;
+			
+			padding: 5px 30px;
+			margin: 5px 20px;
+			width: 500px;
+		
+		}
+		div.addJewelry div.view {
+			display: inline-block;
+			border: 1px solid black;
+			padding: 5px 20px;
+			margin: 5px 20px;
+
+		}
+
+		div.input select {
+			width: 150px;
+		}
+		div.AJ{
+			text-align: center;
+			color: #c0b283;
+		}
+
+		div.BTN{
+			 text-align: center;
+		}
+
+		.button {
+			    background-color: #c0b283; 
+			    border: none;
+			    color: white;
+			    padding: 15px 32px;
+			    text-align: center;
+			    display: inline-block;
+			    font-size: 16px;
+			    margin: 4px 2px;
+			    cursor: pointer;
+			    -webkit-transition-duration: 0.4s; /* Safari */
+			    transition-duration: 0.4s;
+			}
+
+.button1 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+  </style>
+</head>
+
+<body id="body">
+
+<div class="headerpage"></div>
+
+
+
+
+<section>
+<div class="addJewelry">
+			<div class="AJ">
+				<h1>  Edit & Delete:  </h1>               
+			</div>
+			<div class="center">
+				
+				<form class="addJewelry" action="" method="post" enctype="multipart/form-data">
+					<p><span>Jewelry Name : </span><input class="form-control" type="text" name="" value="" required></p>
+					<p><span>Price : </span><input class="form-control" type="text" name="" value="" required></p>
+					<p><span>Stock Number : </span><input class="form-control" type="text" name="" value="" required></p>
+					
+					<p><span>Category :  </span>
+						<select name="category" class="form-control" style="width: 300px" required> 
+							<option value="" selected> </option>
+								<option value=""> Earring </option>
+								<option value=""> Necklace </option>
+								<option value=""> Ring </option>     
+						</select>
+					</p>
+				
+					<p><span>Upload Image1 :</span><span></span><input class="form-control" type="file" name="image" required /></p>
+					<p><span>Upload Image2 :</span><span></span><input class="form-control" type="file" name="image" required /></p>
+					<p><span>Upload Image3 :</span><span></span><input class="form-control" type="file" name="image" required /></p>
+					
+					<p><span>Product Detail</span></p>
+					<textarea cols="170" rows="10">You can change the detail here</textarea>
+					
+				</form>
+				
+			</div>
+
+
+			<div class="BTN">
+				<button class="button button2">Edit</button>
+				<button class="button button2">Delete</button>
+			</div>
+				 
+
+			
+		</div>
+</section>
+
+
+<!--Start Call To Action -->
+<section class="call-to-action bg-gray section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="title">
+					<h2>SUBSCRIBE TO NEWSLETTER</h2>
+					<p>Exclusive ROYAL JEWELRY offers are only a text away</p>
+				</div>
+				<div class="col-lg-6 col-md-offset-3">
+				    <div class="input-group subscription-form">
+				      <input type="text" class="form-control" placeholder="Enter Your Email Address">
+				      <span class="input-group-btn">
+				        <button class="btn btn-main" type="button">Subscribe Now!</button>
+				      </span>
+				    </div><!-- /input-group -->
+			  </div><!-- /.col-lg-6 -->
+
+			</div>
+		</div> 		<!-- End row -->
+	</div>   	<!-- End container -->
+</section>   <!-- End section -->
+
+
+
+<div class="footerpage"></div>
+
+
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+    
+
+    <!-- Main jQuery -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap 3.1 -->
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+  
+    <!-- Slick Carousel -->
+    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+   
+
+    <!-- Main Js File -->
+    <script src="js/index2.js"></script>
+
+	</script>
+
+
+  </body>
+  </html>
+
+
+
+
+
